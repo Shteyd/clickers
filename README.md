@@ -3,3 +3,4 @@
 Added:
  - rxdart
  - flutter_hooks
+ - flutter_bloc
