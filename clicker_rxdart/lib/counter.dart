@@ -6,9 +6,11 @@ class CounterService {
   Stream<int> get stream$ => _counter.stream;
   int get currentIndex => _counter.value;
 
-  void increment() {
-    _counter.add(currentIndex + 1);
-  }
+  void increment() => _counter.add(currentIndex + 1);
+
+  void decrement() => _counter.add(currentIndex - 1);
+
+  void clear() => _counter.add(0);
 }
 
 final CounterService counterService = CounterService();

@@ -8,21 +8,35 @@ class MyHomePage extends HookWidget {
   Widget build(BuildContext context) {
     final counter = useState<int>(0);
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '${counter.value}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => counter.value++,
-        child: const Icon(Icons.add),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Spacer(),
+          const Text('You have pushed the button this many times:'),
+          Text(
+            '${counter.value}',
+            style: Theme.of(context).textTheme.headline4,
+          ),
+          const Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              FloatingActionButton(
+                onPressed: () => counter.value--,
+                child: const Icon(Icons.remove),
+              ),
+              FloatingActionButton(
+                onPressed: () => counter.value = 0,
+                child: const Icon(Icons.delete_outline),
+              ),
+              FloatingActionButton(
+                onPressed: () => counter.value++,
+                child: const Icon(Icons.add),
+              ),
+            ],
+          ),
+          const SizedBox(height: 25),
+        ],
       ),
     );
   }

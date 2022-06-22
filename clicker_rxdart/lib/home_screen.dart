@@ -11,6 +11,7 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Spacer(),
             const Text('You have pushed the button this many times:'),
             StreamBuilder<int>(
               stream: counterService.stream$,
@@ -21,12 +22,27 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                FloatingActionButton(
+                  onPressed: () => counterService.decrement(),
+                  child: const Icon(Icons.remove),
+                ),
+                FloatingActionButton(
+                  onPressed: () => counterService.clear(),
+                  child: const Icon(Icons.delete_outline),
+                ),
+                FloatingActionButton(
+                  onPressed: () => counterService.increment(),
+                  child: const Icon(Icons.add),
+                ),
+              ],
+            ),
+            const SizedBox(height: 25),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => counterService.increment(),
-        child: const Icon(Icons.add),
       ),
     );
   }
