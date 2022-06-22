@@ -2,3 +2,4 @@
 
 Added:
  - rxdart
+ - flutter_hooks
