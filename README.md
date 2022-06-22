@@ -5,3 +5,4 @@ Added:
  - flutter_hooks
  - flutter_bloc
  - provider
+ - redux
