@@ -12,5 +12,3 @@ class CounterService {
 
   void clear() => _counter.add(0);
 }
-
-final CounterService counterService = CounterService();
