@@ -6,6 +6,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final counterService = CounterService();
     return Scaffold(
       body: Center(
         child: Column(
