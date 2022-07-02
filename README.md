@@ -8,3 +8,4 @@ Added:
  - redux
  - statefulwidget
  - mobx
+ - getx
