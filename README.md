@@ -6,3 +6,5 @@ Added:
  - flutter_bloc
  - provider
  - redux
+ - statefulwidget
+ - mobx
