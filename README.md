@@ -9,4 +9,5 @@ Added:
  - statefulwidget
  - mobx
  - getx
- - riverpod
+ - flutter_riverpod
+ - bolter_flutter
