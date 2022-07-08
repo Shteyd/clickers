@@ -9,3 +9,4 @@ Added:
  - statefulwidget
  - mobx
  - getx
+ - riverpod
